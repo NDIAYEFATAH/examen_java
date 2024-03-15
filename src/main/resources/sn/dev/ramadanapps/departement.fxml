@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="467.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.dev.ramadanapps.controller.DepartementController">
+   <children>
+      <Label layoutX="39.0" layoutY="292.0" text="Region" />
+      <Label layoutX="39.0" layoutY="39.0" text="Nom Departement" />
+      <Label layoutX="39.0" layoutY="198.0" text="Population" />
+      <Label layoutX="39.0" layoutY="107.0" text="Superficie" />
+      <TextField fx:id="nomTfd" layoutX="39.0" layoutY="71.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="superficieTfd" layoutX="39.0" layoutY="146.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="populationTfd" layoutX="39.0" layoutY="233.0" prefHeight="25.0" prefWidth="181.0" />
+      <ComboBox fx:id="regionCmb" layoutX="39.0" layoutY="340.0" prefHeight="25.0" prefWidth="181.0" />
+      <ButtonBar layoutX="39.0" layoutY="391.0" prefHeight="40.0" prefWidth="219.0">
+        <buttons>
+          <Button fx:id="btnSave" mnemonicParsing="false" onAction="#save" text="SAVE" />
+            <Button mnemonicParsing="false" onAction="#update" text="UPDATE" />
+            <Button mnemonicParsing="false" onAction="#delete" text="DELETE" />
+        </buttons>
+      </ButtonBar>
+      <TableView fx:id="departementTbl" layoutX="322.0" layoutY="33.0" onMouseClicked="#getData" prefHeight="389.0" prefWidth="527.0">
+        <columns>
+          <TableColumn fx:id="idTbl" prefWidth="48.0" text="ID" />
+          <TableColumn fx:id="nomTbl" prefWidth="109.33334350585938" text="NOM" />
+            <TableColumn fx:id="superficieTbl" prefWidth="124.66671752929688" text="SUPERFICIE" />
+            <TableColumn fx:id="populationTbl" prefWidth="110.6666259765625" text="POPULATION" />
+            <TableColumn fx:id="regionTbl" prefWidth="132.66668701171875" text="REGION" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
